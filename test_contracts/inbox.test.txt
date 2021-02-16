@@ -1,0 +1,37 @@
+import { waffleJest } from "@ethereum-waffle/jest";
+import { ethers } from "hardhat";
+
+import { Inbox, Inbox__factory } from "../typechain";
+
+expect.extend(waffleJest);
+
+let inbox: Inbox;
+
+beforeEach(async () => {
+  const signers = await ethers.getSigners();
+
+  const inboxFactory = (await ethers.getContractFactory(
+    "Inbox",
+    signers[0]
+  )) as Inbox__factory;
+  inbox = await inboxFactory.deploy("default message");
+});
+
+it("should have a proper address", async () => {
+  const contractAddress = inbox.address;
+  expect(contractAddress).toBeProperAddress();
+});
+
+it("should return default message", async () => {
+  const initialInbox = await inbox.message();
+  expect(initialInbox).toBe("default message");
+});
+
+it("should change the message", async () => {
+  await inbox.setMessage("new message");
+  const newInboxMessage = await inbox.message();
+  expect(newInboxMessage).toBe("new message");
+});
+
+
+
