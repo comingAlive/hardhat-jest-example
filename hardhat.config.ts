@@ -22,6 +22,10 @@ const config: HardhatUserConfig = {
     compilers: [{ version: "0.8.1", settings: {} }],
   },
   networks: {
+    ganache: {
+      url: "HTTP://127.0.0.1:7545",
+      accounts: ["819f16292589e329844e1f927fef47ed35e0ebe0519fdb02ee93c2d85708481e"]
+    },
     hardhat: {},
     localhost: {},
     rinkeby: {

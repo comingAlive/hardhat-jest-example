@@ -26,7 +26,7 @@ export async function toHaveEmittedWith(
       pass: false,
       message: () =>
         `Expected event "${eventName}" to be emitted, but it doesn't exist in the contract. ` +
-        'Please make sure you\'ve compiled its latest version before running the test_contracts.'
+        'Please make sure you\'ve compiled its latest version before running the test.'
     };
   }
 

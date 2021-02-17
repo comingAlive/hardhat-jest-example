@@ -8,7 +8,7 @@
     "resolveJsonModule": true
   },
   "include": ["./scripts",
-    "./test_contracts"
+    "./test"
   ],
   "files": ["./hardhat.config.ts"]
 }

@@ -7,8 +7,9 @@
     "build": "npm run clean && npm run compile",
     "clean": "npx hardhat clean",
     "compile": "npx hardhat compile",
-    "test": "npx hardhat test_contracts",
-    "coverage": "npm run build && npx hardhat coverage --temp artifacts --network coverage"
+    "test": "npx hardhat test",
+    "coverage": "npm run build && npx hardhat coverage --temp artifacts --network coverage",
+    "deploy": "npx hardhat run --network ganache scripts/deploy.ts"
   },
   "author": "rhlsthrm",
   "license": "MIT",
