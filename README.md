@@ -1,12 +1,17 @@
 # Typescript Solidity Dev Starter Kit
 
-_Updated to use Hardhat+Jest._
+_Forked and Updated to use Jest instead of Mocha and Chai._
 
-This is a starter kit for developing, testing, and deploying smart contracts with a full Typescript environment. This stack uses [Hardhat](https://hardhat.org) as the platform layer to orchestrate all the tasks. [Ethers](https://docs.ethers.io/ethers.js/html/index.html) is used for all Ethereum interactions and testing.
+Original repo: https://github.com/rhlsthrm/typescript-solidity-dev-starter-kit
+
+This is a starter kit for developing, testing, and deploying smart contracts with a full Typescript environment. This
+stack uses [Hardhat](https://hardhat.org) as the platform layer to orchestrate all the
+tasks. [Ethers](https://docs.ethers.io/ethers.js/html/index.html) is used for all Ethereum interactions and testing.
 
 ## Using this Project
 
-Clone this repository, then install the dependencies with `npm install`. Build everything with `npm run build`. https://hardhat.org has excellent docs, and can be used as reference for extending this project.
+Clone this repository, then install the dependencies with `npm install`. Build everything with `npm run build`
+. https://hardhat.org has excellent docs, and can be used as reference for extending this project.
 
 ## Available Functionality
 
@@ -29,7 +34,8 @@ Then in another run `npm run test -- --network localhost`
 Notes:
 
 - When running with this `localhost` option, you get a gas report but may not get good callstacks
-- See [here](https://github.com/cgewecke/eth-gas-reporter#installation-and-config) for how to configure the gas usage report.
+- See [here](https://github.com/cgewecke/eth-gas-reporter#installation-and-config) for how to configure the gas usage
+  report.
 
 ### Run Coverage Report for Tests (doesn't work)
 
