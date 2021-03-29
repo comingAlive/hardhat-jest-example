@@ -9,6 +9,7 @@ contract Lottery {
     address payable[] public players;
 
     constructor() {
+        console.log("Constructor was invoked");
         manager = msg.sender;
     }
 

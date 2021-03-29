@@ -1,9 +1,10 @@
 import "@nomiclabs/hardhat-etherscan";
 import "@nomiclabs/hardhat-waffle";
-import { config as dotEnvConfig } from "dotenv";
+import {config as dotEnvConfig} from "dotenv";
 import "hardhat-typechain";
+import "hardhat-jest-plugin";
+import {HardhatUserConfig} from "hardhat/types";
 
-import { HardhatUserConfig } from "hardhat/types";
 
 dotEnvConfig();
 
@@ -19,12 +20,12 @@ const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",
   solidity: {
-    compilers: [{ version: "0.8.1", settings: {} }],
+    compilers: [{version: "0.8.1", settings: {}}],
   },
   networks: {
     ganache: {
       url: "HTTP://127.0.0.1:7545",
-      accounts: ["819f16292589e329844e1f927fef47ed35e0ebe0519fdb02ee93c2d85708481e"]
+      accounts: ["e9794359a4ca9884168dea4b0a862208bda09e666ff8da9eefc1d341a4808d90"]
     },
     hardhat: {},
     localhost: {},

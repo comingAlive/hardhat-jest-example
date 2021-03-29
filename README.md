@@ -1,10 +1,8 @@
 # Typescript Solidity Dev Starter Kit
 
-_Updated to use Hardhat!_
+_Updated to use Hardhat+Jest._
 
 This is a starter kit for developing, testing, and deploying smart contracts with a full Typescript environment. This stack uses [Hardhat](https://hardhat.org) as the platform layer to orchestrate all the tasks. [Ethers](https://docs.ethers.io/ethers.js/html/index.html) is used for all Ethereum interactions and testing.
-
-[Blog Post](https://medium.com/@rahulsethuram/the-new-solidity-dev-stack-buidler-ethers-waffle-typescript-tutorial-f07917de48ae)
 
 ## Using this Project
 
@@ -12,7 +10,7 @@ Clone this repository, then install the dependencies with `npm install`. Build e
 
 ## Available Functionality
 
-### Build Contracts and Generate Typechain Typeings
+### Build Contracts and Generate Typechain Typings
 
 `npm run compile`
 
@@ -21,11 +19,6 @@ Clone this repository, then install the dependencies with `npm install`. Build e
 In one terminal run `npx hardhat node`
 
 Then in another run `npm run test`
-
-Notes:
-
-- As is, the tests fail on purpose. This is to show the Solidity stack traces that Buidler enables!
-- The gas usage table may be incomplete (the gas report currently needs to run with the `--network localhost` flag; see below).
 
 ### Run Contract Tests and Generate Gas Usage Report
 
@@ -38,14 +31,9 @@ Notes:
 - When running with this `localhost` option, you get a gas report but may not get good callstacks
 - See [here](https://github.com/cgewecke/eth-gas-reporter#installation-and-config) for how to configure the gas usage report.
 
-### Run Coverage Report for Tests
+### Run Coverage Report for Tests (doesn't work)
 
 `npm run coverage`
-
-Notes:
-
-- running a coverage report currently deletes artifacts, so after each coverage run you will then need to run `npx buidler clean` followed by `npm run build` before re-running tests
-- the branch coverage is 75%
 
 ### Deploy to Ethereum
 
@@ -58,5 +46,3 @@ Create/modify network config in `hardhat.config.ts` and add API key and private 
 Add Etherscan API key to `hardhat.config.ts`, then run:
 
 `npx hardhat verify-contract --contract-name Counter --address <DEPLOYED ADDRESS>`
-
-PRs and feedback welcome!
