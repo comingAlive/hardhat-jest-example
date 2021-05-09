@@ -1,19 +1,19 @@
-import { ethers } from "hardhat";
+import {ethers} from "hardhat";
 
 async function main() {
-  const factory = await ethers.getContractFactory("Lottery");
+  const LotteryFactory = await ethers.getContractFactory("Lottery");
 
   // If we had constructor arguments, they would be passed into deploy()
-  let contract = await factory.deploy();
+  let lottery = await LotteryFactory.deploy();
 
   // The address the Contract WILL have once mined
-  console.log(contract.address);
+  console.log(lottery.address);
 
   // The transaction that was sent to the network to deploy the Contract
-  console.log(contract.deployTransaction.hash);
+  console.log(lottery.deployTransaction.hash);
 
-  // The contract is NOT deployed yet; we must wait until it is mined
-  await contract.deployed();
+  // The lottery is NOT deployed yet; we must wait until it is mined
+  await lottery.deployed();
 }
 
 main()

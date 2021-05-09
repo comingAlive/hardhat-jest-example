@@ -13,12 +13,12 @@ let signers: SignerWithAddress[];
 beforeEach(async () => {
   signers = await ethers.getSigners();
 
-  const lotteryFactory = (await ethers.getContractFactory(
+  const LotteryFactory = (await ethers.getContractFactory(
     "Lottery",
     signers[0]
   )) as Lottery__factory;
 
-  lottery = await lotteryFactory.deploy();
+  lottery = await LotteryFactory.deploy();
 });
 
 describe("Lotter Contract", () => {

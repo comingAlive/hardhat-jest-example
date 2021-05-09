@@ -19,27 +19,9 @@ Clone this repository, then install the dependencies with `npm install`. Build e
 
 `npm run compile`
 
-### Run Contract Tests & Get Callstacks
+### Run Contract Tests.
 
-In one terminal run `npx hardhat node`
-
-Then in another run `npm run test`
-
-### Run Contract Tests and Generate Gas Usage Report
-
-In one terminal run `npx buidler node`
-
-Then in another run `npm run test -- --network localhost`
-
-Notes:
-
-- When running with this `localhost` option, you get a gas report but may not get good callstacks
-- See [here](https://github.com/cgewecke/eth-gas-reporter#installation-and-config) for how to configure the gas usage
-  report.
-
-### Run Coverage Report for Tests (doesn't work)
-
-`npm run coverage`
+`jest`
 
 ### Deploy to Ethereum
 

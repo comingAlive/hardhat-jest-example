@@ -1,15 +1,14 @@
 import "@nomiclabs/hardhat-etherscan";
 import "@nomiclabs/hardhat-waffle";
 import {config as dotEnvConfig} from "dotenv";
-import "hardhat-typechain";
+import "hardhat-gas-reporter";
 import "hardhat-jest-plugin";
+import "hardhat-typechain";
+
 import {HardhatUserConfig} from "hardhat/types";
 
 
 dotEnvConfig();
-
-// TODO: reenable solidity-coverage when it works
-// import "solidity-coverage";
 
 const INFURA_API_KEY = process.env.INFURA_API_KEY || "";
 const RINKEBY_PRIVATE_KEY =
@@ -20,7 +19,7 @@ const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",
   solidity: {
-    compilers: [{version: "0.8.1", settings: {}}],
+    compilers: [{version: "0.8.4", settings: {}}],
   },
   networks: {
     ganache: {
