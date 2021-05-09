@@ -23,7 +23,7 @@ Clone this repository, then install the dependencies with `npm install`. Build e
 
 `jest`
 
-### Start local node.
+### Start a local node.
 
 `hardhat node`
 
