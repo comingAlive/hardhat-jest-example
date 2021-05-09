@@ -17,20 +17,28 @@ Clone this repository, then install the dependencies with `npm install`. Build e
 
 ### Build Contracts and Generate Typechain Typings
 
-`npm run compile`
+`yarn compile`
 
 ### Run Contract Tests.
 
 `jest`
 
+### Start local node.
+
+`hardhat node`
+
+### Run Contract Test on the specific network.
+
+`yarn test -- --network localhost`
+
 ### Deploy to Ethereum
 
 Create/modify network config in `hardhat.config.ts` and add API key and private key, then run:
 
-`npx hardhat run --network rinkeby scripts/deploy.txt`
+`hardhat run --network rinkeby scripts/deploy.txt`
 
 ### Verify on Etherscan
 
 Add Etherscan API key to `hardhat.config.ts`, then run:
 
-`npx hardhat verify-contract --contract-name Counter --address <DEPLOYED ADDRESS>`
+`hardhat verify-contract --contract-name Counter --address <DEPLOYED ADDRESS>`

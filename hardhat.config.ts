@@ -1,7 +1,6 @@
 import "@nomiclabs/hardhat-etherscan";
 import "@nomiclabs/hardhat-waffle";
 import {config as dotEnvConfig} from "dotenv";
-import "hardhat-gas-reporter";
 import "hardhat-jest-plugin";
 import "hardhat-typechain";
 
