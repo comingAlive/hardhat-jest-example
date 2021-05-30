@@ -1,18 +1,26 @@
-# Typescript Solidity Dev Starter Kit
+# Hardhat TypeScript Jest Dev Starter Kit
 
-_Forked and Updated to use Jest instead of Mocha and Chai._
+Mocha and Chai instead of Jest: https://github.com/rhlsthrm/typescript-solidity-dev-starter-kit
 
-Original repo: https://github.com/rhlsthrm/typescript-solidity-dev-starter-kit
+Consists of:
+1. [Hardhat](https://hardhat.org) - Ethereum development environment.
+2. [Ethers](https://github.com/ethers-io/ethers.js/) - Ethereum interactions and utilities.
+3. [TypeChain](https://github.com/ethereum-ts/TypeChain) - TypeScript typings generator.
+4. [Jest](https://github.com/facebook/jest) - testing framework.
+5. [Waffle](https://github.com/EthWorks/Waffle) - testing matchers.
 
-This is a starter kit for developing, testing, and deploying smart contracts with a full Typescript environment. This
-stack uses [Hardhat](https://hardhat.org) as the platform layer to orchestrate all the
-tasks. [Ethers](https://docs.ethers.io/ethers.js/html/index.html) is used for all Ethereum interactions and testing.
+## How to use
 
-## Using this Project
+Clone repo and install dependencies:
 
-Clone this repository, then install the dependencies with `npm install`. Build everything with `npm run build`
-. https://hardhat.org has excellent docs, and can be used as reference for extending this project.
+```bash
+git clone https://github.com/comingAlive/hardhat-jest-example.git
+cd hardhat-jest-example
 
+npm install
+# or
+yarn
+```
 ## Available Functionality
 
 ### Build Contracts and Generate Typechain Typings
@@ -27,7 +35,7 @@ Clone this repository, then install the dependencies with `npm install`. Build e
 
 `hardhat node`
 
-### Run Contract Test on the specific network.
+### Run Contract Test on the local network.
 
 `yarn test -- --network localhost`
 
@@ -35,7 +43,7 @@ Clone this repository, then install the dependencies with `npm install`. Build e
 
 Create/modify network config in `hardhat.config.ts` and add API key and private key, then run:
 
-`hardhat run --network rinkeby scripts/deploy.txt`
+`hardhat run --network rinkeby scripts/deploy.ts`
 
 ### Verify on Etherscan
 

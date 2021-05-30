@@ -7,8 +7,9 @@
     "outDir": "dist",
     "resolveJsonModule": true
   },
-  "include": ["./scripts",
-    "./test"
-  ],
-  "files": ["./hardhat.config.ts"]
+  "include": ["./scripts", "./test"],
+  "files": [
+    "./hardhat.config.ts",
+    "node_modules/@ethereum-waffle/jest/src/types.d.ts"
+  ]
 }

@@ -1,11 +1,11 @@
-import { waffleJest } from "@ethereum-waffle/jest";
+import {waffleJest} from "@ethereum-waffle/jest";
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/dist/src/signer-with-address";
 import { utils } from "ethers";
 import { ethers } from "hardhat";
 
-import { Lottery, Lottery__factory } from "../typechain";
-
 expect.extend(waffleJest);
+
+import { Lottery, Lottery__factory } from "../typechain";
 
 let lottery: Lottery;
 let signers: SignerWithAddress[];
@@ -83,7 +83,7 @@ describe("Lotter Contract", () => {
     const finalBalance = await signers[0].getBalance();
 
     const difference = finalBalance.sub(initialBalance);
-    console.log(difference.gt(utils.parseEther("2")))
-    expect(difference.gt(utils.parseEther("1.8"))).toBeTruthy()
+    console.log(difference.gt(utils.parseEther("2")));
+    expect(difference.gt(utils.parseEther("1.8"))).toBeTruthy();
   });
 });
