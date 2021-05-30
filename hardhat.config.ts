@@ -4,6 +4,7 @@ import { config as dotEnvConfig } from "dotenv";
 
 // import "hardhat-abi-exporter";
 import "hardhat-typechain";
+import "hardhat-jest-plugin";
 import { HardhatUserConfig } from "hardhat/types";
 
 dotEnvConfig();
@@ -15,7 +16,7 @@ const RINKEBY_PRIVATE_KEY =
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 
 const config: HardhatUserConfig = {
-  defaultNetwork: "localhost",
+  defaultNetwork: "hardhat",
   solidity: {
     compilers: [{ version: "0.8.4", settings: {} }],
   },
